@@ -21,13 +21,18 @@ checkoutBtn.addEventListener("click", (event) => {
 
     if (cardNumber === "1234 1234 1234 1234" && cardCvv === "123") {
         alert("Payment successful!");
+        
         paymentFailure.style.display = 'none';
         paymentSuccess.style.display = 'block';
-        localStorage.setItem('checkout', 0); // reset cart
+
+        // reset cart
+        localStorage.setItem('checkout', 0);    
+        localStorage.setItem('totalPrice', 0);  // important
         document.querySelector('#checkout').innerHTML = 0;
 
-         // redirect to payment success page
+        // redirect to payment success page
         window.location.href = "/successful";
+
     } else {
         alert("Payment failed!");
         paymentFailure.style.display = 'block';
