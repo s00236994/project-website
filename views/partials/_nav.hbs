@@ -4,14 +4,14 @@
     <!-- Brand logo links to home -->
     <a class="navbar-brand" href="/">
       <picture>
-        <source media="(min-width: 601px)" srcset="images/leeds-logo-tablet.png">
-        <img src="images/leeds-logo-mobile.png" alt="Leeds United Logo" class="img-fluid" style="max-height: 50px;">
+        <source media="(min-width: 601px)" srcset="/images/leeds-logo-tablet.png">
+        <img src="/images/leeds-logo-mobile.png" alt="Leeds United Logo" class="img-fluid" style="max-height: 50px;">
       </picture>
     </a>
 
     <!-- Hamburger for mobile/tablet -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -31,13 +31,23 @@
           <a class="nav-link btn-nav {{#if state.contact}}active{{/if}}" href="/contactus">Contact Us</a>
         </li>
       </ul>
+
+      <!-- Login/Logout -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link btn btn-warning text-dark fw-bold" id="loginlogout" href="#"
+            style="margin-left:10px;">Login</a>
+        </li>
+      </ul>
+
+
+      <!-- Cart -->
+      <a href="/cart" class="btn btn-outline-light position-relative ms-2">
+        <i class="bi bi-cart-fill"></i>
+        <span id="checkout"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </a>
+
     </div>
-
-    <!-- Cart-->
-    <a href="/shop" class="btn btn-outline-light position-relative ms-auto">
-      <i class="bi bi-cart-fill"></i>
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-    </a>
-
   </div>
 </nav>

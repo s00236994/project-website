@@ -1,0 +1,31 @@
+<main class="container my-5">
+  <h1 class="mb-4">Login to Your Account</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div role="alert" id="loginerror" class="alert alert-danger" style="display:none;">
+        The username or password you entered is incorrect.
+      </div>
+
+      <form id="user-login">
+        <div class="mb-3">
+          <label for="emailAddressID" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailAddressID" placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="passwordID" class="form-label">Password</label>
+          <input type="password" class="form-control" id="passwordID" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+
+      <p class="mt-3 text-center">
+        Don't have an account? <a href="/register">Register here</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="/custom-js/login.js"></script>

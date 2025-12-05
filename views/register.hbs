@@ -1,0 +1,43 @@
+<main class="container my-5">
+  <h1 class="mb-4">Create an Account</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <form id="user-register">
+        <div class="mb-3">
+          <label for="firstNameID" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstNameID" placeholder="Enter your first name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="lastNameID" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastNameID" placeholder="Enter your last name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="emailID" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailID" placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="passwordID" class="form-label">Password</label>
+          <input type="password" class="form-control" id="passwordID" placeholder="Enter your password" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="dobID" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="dobID" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
+
+      <p class="mt-3 text-center">
+        Already have an account? <a href="/login">Login here</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="/custom-js/register.js"></script>
