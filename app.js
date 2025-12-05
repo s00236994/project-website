@@ -114,6 +114,29 @@ app.get('/register', (req, res) => {
   res.render('register', { state, head }); 
 });
 
+// Cart page route
+app.get('/cart', (req, res) => {
+  const state = { cart: true };
+  const head = {
+    title: "Cart",
+    description: "View your cart items",
+    keywords: "cart, shopping, checkout"
+  };
+  res.render('cart', { state, head });
+});
+
+// checkout page route
+app.get('/checkout', (req, res) => {
+  const state = { shop: true }; 
+  const head = {
+    title: "Checkout",
+    description: "Review your items and proceed to checkout",
+    keywords: "cart, checkout, shopping"
+  };
+  res.render('checkout', { state, head }); 
+});
+
+
 
 
 

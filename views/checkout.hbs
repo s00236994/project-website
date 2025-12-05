@@ -1,0 +1,68 @@
+<h1>Checkout</h1>
+
+<form id="user-checkout" class="mt-3">
+
+  <!-- Delivery Details -->
+  <fieldset class="mb-4">
+    <legend>Delivery Details</legend>
+
+    <div class="mb-2">
+      <label for="getFirstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="getFirstName" required>
+    </div>
+
+    <div class="mb-2">
+      <label for="getLastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="getLastName" required>
+    </div>
+
+    <div class="mb-2">
+      <label for="getAddress1" class="form-label">Address 1</label>
+      <input type="text" class="form-control" id="getAddress1" required>
+    </div>
+
+    <div class="mb-2">
+      <label for="getAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="getAddress2" required>
+    </div>
+
+    <div class="mb-2">
+      <label for="getAddress3" class="form-label">Address 3</label>
+      <input type="text" class="form-control" id="getAddress3" required>
+    </div>
+
+  </fieldset>
+
+  <!-- Payment Details -->
+  <fieldset class="mb-4">
+    <legend>Payment Details</legend>
+
+    <div class="mb-2">
+      <label for="cardName" class="form-label">Card Name</label>
+      <input type="text" class="form-control" id="cardName" required>
+    </div>
+
+    <div class="mb-2">
+      <label for="cardNumber" class="form-label">Card Number</label>
+      <input type="text" class="form-control" id="cardNumber" required>
+    </div>
+
+    <div class="mb-2">
+      <label for="cardCvv" class="form-label">CVC</label>
+      <input type="password" class="form-control" id="cardCvv" required>
+    </div>
+
+  </fieldset>
+
+  <div class="alert alert-success d-none" id="payment-success" role="alert">
+    Thank you for your purchase! You will receive delivery details via email. 
+    <a href="/shop">Return to Shop</a>
+  </div>
+  <div class="alert alert-danger d-none" id="payment-failure" role="alert">
+    There seems to be a problem with the card details you entered.
+  </div>
+
+  <button type="submit" id="buy-now" class="btn btn-primary">Buy Now</button>
+</form>
+
+<script src="/custom-js/checkout.js"></script>
