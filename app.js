@@ -136,6 +136,17 @@ app.get('/checkout', (req, res) => {
   res.render('checkout', { state, head }); 
 });
 
+// Successful payment page route
+app.get('/successful', (req, res) => {
+  const state = {};
+  const head = {
+    title: "Payment Successful",
+    description: "Your payment was successful",
+    keywords: "payment, success, checkout"
+  };
+  res.render('successful', { state, head });
+});
+
 
 
 
