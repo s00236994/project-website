@@ -91,6 +91,29 @@ app.get('/submission', (req, res) => {
   res.render('submission', { formDetails });
 });
 
+// Login page route
+app.get('/login', (req, res) => {
+  const state = { login: true };
+  const head = {
+    title: "Login",
+    description: "Login to your account",
+    keywords: "login, user, account"
+  };
+  res.render('login', { state, head }); 
+});
+
+
+// Register page route
+app.get('/register', (req, res) => {
+  const state = { register: true };
+  const head = {
+    title: "Register",
+    description: "Register your account",
+    keywords: "register, user, account"
+  };
+  res.render('register', { state, head }); 
+});
+
 
 
 
