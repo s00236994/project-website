@@ -7,6 +7,9 @@ const exphbs = require('express-handlebars');
 // instantiate express
 const app = express();
 
+// load filesystem to read JSON
+const fs = require('fs');
+
 // configure express to use handlebars as templating engine
 app.engine(
   'hbs',
@@ -28,7 +31,7 @@ app.set('views', 'views');
 // where to find static files - css, images, js
 app.use(express.static('public'));
 
-//Home route
+//home route
 app.get('/', (req, res) => {
   const state = { home: true };
   const head = {
@@ -52,7 +55,7 @@ app.get('/contactus', (req, res) => {
   console.log('contactus');
 });
 
-//History route
+//history route
 app.get('/history', (req, res) => {
   const state = { history: true };
   const head = {
@@ -64,7 +67,7 @@ app.get('/history', (req, res) => {
   console.log('history');
 });
 
-//new shop page route
+// new shop page route with JSON products
 app.get('/shop', (req, res) => {
   const state = { shop: true };
   const head = {
@@ -72,7 +75,18 @@ app.get('/shop', (req, res) => {
     description: "This is the shop page of Leeds United",
     keywords: "shop, football, soccer, leeds united"
   };
-  res.render('shop', { state, head });
+
+  // read products.json from the data folder
+const rawData = fs.readFileSync('./views/JSONdata/products.json', 'utf8');
+
+  // convert JSON text into a js array
+  const products = JSON.parse(rawData);
+  console.log("Products loaded:", products);
+
+
+  // send products into the template as products
+  res.render('shop', { state, head, products });
+
   console.log('shop');
 });
 
@@ -91,7 +105,7 @@ app.get('/submission', (req, res) => {
   res.render('submission', { formDetails });
 });
 
-// Login page route
+// login page route
 app.get('/login', (req, res) => {
   const state = { login: true };
   const head = {
@@ -103,7 +117,7 @@ app.get('/login', (req, res) => {
 });
 
 
-// Register page route
+// register page route
 app.get('/register', (req, res) => {
   const state = { register: true };
   const head = {
@@ -114,7 +128,7 @@ app.get('/register', (req, res) => {
   res.render('register', { state, head }); 
 });
 
-// Cart page route
+// cart page route
 app.get('/cart', (req, res) => {
   const state = { cart: true };
   const head = {
@@ -136,7 +150,7 @@ app.get('/checkout', (req, res) => {
   res.render('checkout', { state, head }); 
 });
 
-// Successful payment page route
+// sucessful payment page route
 app.get('/successful', (req, res) => {
   const state = {};
   const head = {

@@ -2,83 +2,20 @@
   <div class="container py-5">
     <div class="row g-4">
 
-      <!-- Product 1 -->
+      <!-- Loop over every product from products.json  -->
+      {{#each products}}
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 text-center">
-          <img src="/images/homeshirt.png" class="card-img-top img-fluid" alt="Home Shirt">
+          <img src="{{image}}" class="card-img-top img-fluid" alt="{{name}}">
           <div class="card-body">
-            <h5 class="card-title">Home Shirt</h5>
-            <p class="price">€49.99</p>
-            <p class="product-desc">Classic Leeds United home colours.</p>
-            <a href="#" id="addtocart1" class="btn btn-primary">Add to Cart</a>
+            <h5 class="card-title">{{name}}</h5>
+            <p class="price">€{{price}}</p>
+            <p class="product-desc">{{description}}</p>
+            <a href="#" id="addtocart{{id}}" class="btn btn-primary">Add to Cart</a>
           </div>
         </div>
       </div>
-
-      <!-- Product 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 text-center">
-          <img src="/images/awayshirt.png" class="card-img-top img-fluid" alt="Away Shirt">
-          <div class="card-body">
-            <h5 class="card-title">Away Shirt</h5>
-            <p class="price">€49.99</p>
-            <p class="product-desc">Dark blue away kit with bright yellow sleeves.</p>
-            <a href="#" id="addtocart2" class="btn btn-primary">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 text-center">
-          <img src="/images/motmug.png" class="card-img-top img-fluid" alt="MOT Mug">
-          <div class="card-body">
-            <h5 class="card-title">MOT Mug</h5>
-            <p class="price">€5.99</p>
-            <p class="product-desc">White ceramic mug with MOT print - perfect for matchday tea.</p>
-            <a href="#" id="addtocart3" class="btn btn-primary">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 text-center">
-          <img src="/images/motbuckethat.png" class="card-img-top img-fluid" alt="MOT Bucket Hat">
-          <div class="card-body">
-            <h5 class="card-title">MOT Bucket Hat</h5>
-            <p class="price">€19.99</p>
-            <p class="product-desc">Yellow bucket hat with MOT text - great for sunny away days.</p>
-            <a href="#" id="addtocart4" class="btn btn-primary">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 5 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 text-center">
-          <img src="/images/lufcpen.png" class="card-img-top img-fluid" alt="LUFC Pen">
-          <div class="card-body">
-            <h5 class="card-title">LUFC Pen</h5>
-            <p class="price">€1.99</p>
-            <p class="product-desc">Black pen with LUFC print - perfect for school or work.</p>
-            <a href="#" id="addtocart5" class="btn btn-primary">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 6 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 text-center">
-          <img src="/images/lufckeychain.png" class="card-img-top img-fluid" alt="LUFC Keychain">
-          <div class="card-body">
-            <h5 class="card-title">LUFC Keychain</h5>
-            <p class="price">€1.99</p>
-            <p class="product-desc">LUFC keychain - carry the club everywhere.</p>
-            <a href="#" id="addtocart6" class="btn btn-primary">Add to Cart</a>
-          </div>
-        </div>
-      </div>
+      {{/each}}
 
     </div>
   </div>

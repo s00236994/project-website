@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Home Shirt",
+    "price": 49.99,
+    "image": "/images/homeshirt.png",
+    "description": "Classic Leeds United home colours.."
+  },
+  {
+    "id": 2,
+    "name": "Away Shirt",
+    "price": 49.99,
+    "image": "/images/awayshirt.png",
+    "description": "Dark blue away kit with bright yellow sleeves."
+  },
+  {
+    "id": 3,
+    "name": "MOT Mug",
+    "price": 5.99,
+    "image": "/images/motmug.png",
+    "description": "White ceramic mug with MOT print - perfect for matchday tea."
+  },
+  {
+    "id": 4,
+    "name": "MOT Bucket Hat",
+    "price": 19.99,
+    "image": "/images/motbuckethat.png",
+    "description": "Bold yellow bucket hat with MOT text - great for sunny away days."
+  },
+  {
+    "id": 5,
+    "name": "LUFC Pen",
+    "price": 1.99,
+    "image": "/images/lufcpen.png",
+    "description": "Smooth black pen with LUFC print - perfect for school or work."
+  },
+  {
+    "id": 6,
+    "name": "LUFC Keychain",
+    "price": 1.99,
+    "image": "/images/lufckeychain.png",
+    "description": "Sturdy LUFC keychain - carry the club everywhere."
+  }
+  
+]
